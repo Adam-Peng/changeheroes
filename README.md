@@ -34,12 +34,12 @@ NOTE: use the contacts.json file in the public folder to populate the Address Bo
 2. Business Logics
 	* Use $http service to get contacts.json
 	* Build Left Side List -> ng-repeat each contact's lastname and firstname -> filtered by search input && ordered by lastname
-	*	Build Main View -> use form and <input disabled> with some css decorations to demonstrate details and toggle input back when user click "edit" so that user can directly edit details.
+	* Build Main View -> use form and <input disabled> and ng-if with some css decorations to demonstrate details and toggle input back when user click "edit" so that user can directly edit details.
 	* Use ngroute to identify which contact user clicks by passing $routeparams into main view controller
 	* Build a customized filter to format phone number as (123)456-7890
 
 3. Module, Directives, filters, Services
-	* ngroute, $http, ng-repeat, ng-view, ng-model, ng-disable, ng-class, ng-if, ng-hide, ng-cloak, | filter:, | orderBy
+	* ngroute, $http, ng-repeat, ng-view, ng-model, ng-disabled, ng-class, ng-if, ng-hide, ng-cloak, | filter:, | orderBy
 
 4. CSS
 	* Use grid system from bootstrap

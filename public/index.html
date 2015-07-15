@@ -35,7 +35,7 @@
         <!-- Contact List -->
         <aside class="col-sm-4 col-lg-4">
           <h1>All Contacts</h1>
-          <input id="search"placeholder="Search" type="text" ng-model="q">
+          <input id="search" placeholder="Search" type="text" ng-model="q">
           <ul>
             <a ng-repeat="contact in contacts | orderBy: 'lastname' | filter: q " ng-href="#/contact-info/{{contacts.indexOf(contact)}}">
               <li ng-cloak>
