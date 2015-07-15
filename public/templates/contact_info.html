@@ -8,20 +8,21 @@
   <!-- use ng-if to format name  -->
   <li class="name">
     <span ng-if="editable == false">
-      <input id="name" type="text" ng-model="currentContact | formatName" ng-disabled="true">
+      <!-- <input ng-model="currentContact | formatName" id="name" ng-disabled="true" style="margin-left:-10px"> -->
+      <span style="padding:1px; border:1px">{{currentContact | formatName}}</span>
     </span>
     <span ng-if="editable == true">
       <input id="firstname" type="text" ng-model="currentContact.firstname" ng-disabled="false">
       <input id="lastname" type="text" ng-model="currentContact.lastname" ng-disabled="false">
-
     </span>
   </li>
   
   <!-- use ng-if to format phone number accordingly -->
-  <li>
+  <li class="phone">
     <label for="phone">Phone: </label>
-    <span class="cell-trick" ng-if="editable==false">
-      <input id="phone" type="text" ng-model="currentContact.phone | formatNum" ng-disabled="true">
+    <span class="cell-trick format-num" ng-if="editable==false">
+      <!-- <input ng-model="currentContact.phone | formatNum" ng-disabled="true" style="margin-left:-10px;"> -->
+      <span style="padding:1px; border:1px">{{currentContact.phone | formatNum}}</span>
     </span>
     <span class="cell-trick" ng-if="editable==true">
       <input id="phone" type="text" ng-model="currentContact.phone" ng-disabled="false">

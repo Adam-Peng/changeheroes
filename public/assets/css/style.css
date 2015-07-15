@@ -115,8 +115,7 @@ section input{
 	border-radius: 5px;
 	border:1px;
 	padding-left: 10px; 
-	padding-top: 4px;
-	padding-bottom: 4px;
+
 }
 .edit{
 	padding: 1px 15px;
@@ -138,7 +137,10 @@ section input{
 }
 
 #name{
-	margin-left: -10px;
+}
+
+.format-num{
+	padding-left: 10px;
 }
 
 #firstname, #lastname{
@@ -147,6 +149,10 @@ section input{
 #firstname{
 	margin-left: -10px;
 
+}
+
+li.phone span{
+	border: 1px;
 }
 section li{
 	font-size: 16px;

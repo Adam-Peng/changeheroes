@@ -13,6 +13,8 @@ var myApp = angular.module('myApp', ['ngRoute'])
     })
 
     .otherwise({redirectTo: '/home'});
+
+
 })
 
 .controller('homeCtrl', ['$scope','$http', function ($scope, $http){
@@ -31,13 +33,34 @@ var myApp = angular.module('myApp', ['ngRoute'])
 
 }])
 
-.controller('contactInfoCtrl', function ($scope, $routeParams){
+.controller('contactInfoCtrl', ['$scope','$routeParams', function ($scope, $routeParams){
 
   var index = $routeParams.contact_index;
   $scope.currentContact = $scope.contacts[index];
   $scope.editable = false;
   $scope.currentContact.fullname = $scope.currentContact.firstname + ' ' + $scope.currentContact.lastname;
 
+}])
+
+.directive("parseNumber", function(){
+   return {
+      require: 'ngModel',
+      link: function(scope, element, attrs, ngModelController) {
+        ngModelController.$parsers.push(function(data) {
+          //convert data from view format to model format
+            var input = data;
+            var out = input.replace('(','');
+          return out; //converted
+        });
+    
+        ngModelController.$formatters.push(function(data) {
+          //convert data from model format to view format
+            var input = data;
+            var out = '('+input.slice(0,3)+')'+input.slice(3,6)+'-'+input.slice(6);
+          return out; //converted
+        });
+      }
+    };
 })
 
 .filter('formatNum', function(){
