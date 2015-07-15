@@ -1,0 +1,18 @@
+{
+  "name": "ChangeHeroes Test",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Adam-Peng/changeheroes",
+  "description": "Test",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.3",
+    "bootstrap": "~3.3.5"
+  }
+}
