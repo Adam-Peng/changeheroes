@@ -1,0 +1,33 @@
+<form>
+  <button class="edit"  ng-click="editable=!editable">
+    <span ng-hide="editable"> edit</span>
+    <span ng-hide="!editable"> Done</span>
+  </button>
+  <div style="clear:both;"></div>
+
+  <!-- use ng-if to format name  -->
+  <li class="name">
+    <span ng-if="editable == false">
+      <input id="name" type="text" ng-model="currentContact | formatName" ng-disabled="true">
+    </span>
+    <span ng-if="editable == true">
+      <input id="firstname" type="text" ng-model="currentContact.firstname" ng-disabled="false">
+      <input id="lastname" type="text" ng-model="currentContact.lastname" ng-disabled="false">
+
+    </span>
+  </li>
+  
+  <!-- use ng-if to format phone number accordingly -->
+  <li>
+    <label for="phone">Phone: </label>
+    <span class="cell-trick" ng-if="editable==false">
+      <input id="phone" type="text" ng-model="currentContact.phone | formatNum" ng-disabled="true">
+    </span>
+    <span class="cell-trick" ng-if="editable==true">
+      <input id="phone" type="text" ng-model="currentContact.phone" ng-disabled="false">
+    </span>
+  </li>
+
+  <li><label for="email">Email: </label><span class="cell-trick"><input id="email" type="email" ng-model="currentContact.email" ng-disabled="!editable"></span></li>
+  <li><label for="address">Address: </label><span class="cell-trick"><input id="address" type="text" ng-model="currentContact.address" ng-disabled="!editable"></span></li>
+</div>

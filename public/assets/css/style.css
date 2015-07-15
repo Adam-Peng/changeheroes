@@ -1,0 +1,168 @@
+le
+/*
+	Main Style
+*/
+
+/*
+	Google Fonts import "Relaway"
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,600);
+
+html, body{
+	font: 16px;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	font-family:'Raleway', sans-serif;
+	font-weight: 400;
+	color: #333333;
+	min-width: 800px;
+}
+
+a, a:hover, a:target, a:visited, a:focus{
+	text-decoration: none;
+	color: #333333;
+}
+
+header{
+	margin-bottom: 20px;
+}
+/*
+	-------------------------------------- 	Contacts List 	----------------------------------------------
+*/
+
+h1{
+	font-size: 18px;
+	margin:15px auto;
+	text-align: center;
+	font-weight: 600;
+}
+.wrap{
+	display: table;
+	margin: 0 auto;
+	min-width: 750px;
+	min-height: 650px;
+
+}
+
+
+aside, section{
+	display: inline-block;
+}
+
+aside{
+	width: 33.33%;
+	background-color: #cccccc;
+	min-height: 500px !important;
+}
+section{
+	width: 66.66%;
+	background-color: #eeeeee;
+	min-height: 500px !important;
+}
+
+input:focus{
+	outline: none;
+}
+
+#search{
+  	font-size: 16px;
+  	margin-bottom: 20px;
+  	padding: 8px 15px;
+  	border-radius: 30px;
+  	width: 100%;
+  	border: 1px;
+}
+
+ul{
+	padding-left: 0px;
+}
+
+aside li{
+	display: block;
+	list-style: none;
+	padding: 13px 5px;
+	border-bottom: solid 1px #aaaaaa;
+}
+
+aside li:hover{
+	background-color: #bbbbbb;
+}
+
+aside a:nth-child(1) li{
+	border-top: solid 1px #aaaaaa;
+}
+
+li a, li a:hover, li a:target{
+	text-decoration: none;
+	font-size: 16px;
+}
+
+
+/*
+	---------------------------------------	Main View ----------------------------------------
+*/
+.center{
+	margin-top: 40%;
+}
+section input:disabled{
+	background-color: #eeeeee;
+	border:none;
+}
+section input{
+	width: 100%;
+	border-radius: 5px;
+	border:1px;
+	padding-left: 10px; 
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.edit{
+	padding: 1px 15px;
+	background-color: #bbbbbb;
+	font-size: 12px;
+	text-align: center;
+	border: none;
+	border-radius: 10px;
+	margin-top:15px;
+	float: right;
+	font-weight: 600;
+}
+.edit:target, .edit:focus{
+	outline: none;
+}
+.name{
+	font-size: 26px;
+	font-weight: 600;
+}
+
+#name{
+	margin-left: -10px;
+}
+
+#firstname, #lastname{
+	width: 40%;
+}
+#firstname{
+	margin-left: -10px;
+
+}
+section li{
+	font-size: 16px;
+	display: block;
+	list-style: none;
+	padding: 13px 5px;
+}
+
+section label{
+	display: table-cell;
+	font-weight: normal;
+	min-width: 80px;
+}
+.cell-trick{
+	display: table-cell;
+	width: 100%;
+}
+
+
